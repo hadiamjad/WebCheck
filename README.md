@@ -1,8 +1,6 @@
 # Click-Hijacking
 This chrome extension in `/extension` will intercept all click events such as 'click', 'mouseup', mousedown'
-
-### Steps
-#### Crawling
+#### Steps
 1. Clone this repository and move inside the repo directory using `cd` command
 2. Open `two` terminals inside repository directory
 ---- First Terminal ----

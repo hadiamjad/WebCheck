@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
 const cors = require('cors');
+const fs = require('fs');
 
 const jsonfile = require('jsonfile');
 let clickTrigger = ['null'];
@@ -16,6 +17,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+
+fs.mkdir('output', (err) => {
+  if (err) {
+    console.error(err);
+  } 
+});
 
 async function insertRequest(newHttpReq) {
     const file = 'output/request.json';
