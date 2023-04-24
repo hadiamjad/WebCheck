@@ -1,0 +1,3 @@
+{"CoordinateX":56,"CoordinateY":237,"event":"mousedown","element":{"tagName":"IMG","id":"","classes":{"0":"MuiAvatar-img","1":"css-1hy9t21"}},"timestamp":1682378732169,"stack":"Error\n    at HTMLDocument.<anonymous> (chrome-extension://mclkkoldfkilcpgpggnmdladhghkhghd/inject.js:49:30)"}
+{"CoordinateX":56,"CoordinateY":237,"event":"mouseup","timestamp":1682378732252,"stack":"Error\n    at HTMLDocument.<anonymous> (chrome-extension://mclkkoldfkilcpgpggnmdladhghkhghd/inject.js:70:30)"}
+{"CoordinateX":56,"CoordinateY":237,"event":"click","element":{"tagName":"IMG","id":"","classes":{"0":"MuiAvatar-img","1":"css-1hy9t21"}},"timestamp":1682378732254,"stack":"Error\n    at HTMLDocument.<anonymous> (chrome-extension://mclkkoldfkilcpgpggnmdladhghkhghd/inject.js:20:30)"}

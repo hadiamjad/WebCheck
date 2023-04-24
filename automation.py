@@ -5,9 +5,16 @@ import time
 import json
 import shutil
 
+# from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
+import sys
+
+
+# virtual display
+# display = Display(visible=0, size=(800, 600))
+# display.start()
 
 
 
@@ -15,7 +22,7 @@ import os
 # selenium to visit website and get logs
 def visitWebsite(df):
     # extension filepath
-    ext_file = "C:/Users/Hadiy/Downloads/clicks-extension/extension"
+    ext_file = "extension"
 
     opt = webdriver.ChromeOptions()
     # devtools necessary for complete network stack capture
