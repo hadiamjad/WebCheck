@@ -1,12 +1,13 @@
 const port = 3000;
+
 // Attach the debugger to the active tab
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  chrome.debugger.attach({tabId: tabs[0].id}, '1.0', function() {
+function attachDebugger(tabId) {
+  chrome.debugger.attach({tabId: tabId}, '1.0', function() {
     // Enable the Network domain
-    chrome.debugger.sendCommand({tabId: tabs[0].id}, 'Network.enable', {}, function() {
+    chrome.debugger.sendCommand({tabId: tabId}, 'Network.enable', {}, function() {
       // Set up listener for requestWillBeSent event
       chrome.debugger.onEvent.addListener(function(debuggeeId, message, params) {
-        if (debuggeeId.tabId === tabs[0].id && message === 'Network.requestWillBeSent') {
+        if (debuggeeId.tabId === tabId && message === 'Network.requestWillBeSent') {
           fetch(`http://localhost:${port}/request`, {
                   method: "POST",
                   body: JSON.stringify({
@@ -30,4 +31,14 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       });
     });
   });
+}
+
+// Listen for new tab created events
+chrome.tabs.onCreated.addListener(function(tab) {
+  attachDebugger(tab.id);
+});
+
+// Attach the debugger to the active tab when the extension is first installed
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  attachDebugger(tabs[0].id);
 });

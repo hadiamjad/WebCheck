@@ -39,10 +39,13 @@ def visitWebsite(df):
     # sleep
     time.sleep(50)
 
+    f= open("server/output/pageHTML.txt","w+", encoding="utf-8")
+    f.write(str(driver.page_source))
+
     driver.quit()
 
 
-df = pd.DataFrame([["soccerstreams100.io"]], columns=["website"])
+df = pd.DataFrame([["livestrong.com"]], columns=["website"])
 
 for i in df.index:
     # visit website
