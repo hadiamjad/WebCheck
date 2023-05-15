@@ -22,7 +22,7 @@ import sys
 # selenium to visit website and get logs
 def visitWebsite(df):
     # extension filepath
-    ext_file = "extension"
+    ext_file = "C:/Users/Hadiy/Downloads/WebCheck/extension"
 
     opt = webdriver.ChromeOptions()
     # devtools necessary for complete network stack capture
@@ -45,7 +45,7 @@ def visitWebsite(df):
     driver.quit()
 
 
-df = pd.DataFrame([["livestrong.com"]], columns=["website"])
+df = pd.DataFrame([["soccerstreams100.io"]], columns=["website"])
 
 for i in df.index:
     # visit website

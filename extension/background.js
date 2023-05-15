@@ -30,6 +30,17 @@ function attachDebugger(tabId) {
         }
       });
     });
+
+    chrome.debugger.sendCommand({tabId: tabId}, 'Page.enable', {}, function() {
+      // Set up listener for Page.windowOpen event
+      chrome.debugger.onEvent.addListener(function(debuggeeId, message, params) {
+        if (debuggeeId.tabId === tabId && message === 'Page.windowOpen') {
+          console.log("url", params.url, "windowName", params.windowName, "userGesture", params.userGesture);
+        }
+      });
+    });
+
+
   });
 }
 
