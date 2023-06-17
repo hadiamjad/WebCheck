@@ -112,7 +112,7 @@ def main():
             # "script_name-0",
             # "method_name-1",
             # "label-2",
-            # "stack_hash-3",
+            # "is_mixed-3",
             # "num_req_sent-4",
             # "num_nodes-5",
             # "num_edges-6",
