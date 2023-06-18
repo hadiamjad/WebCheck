@@ -15,9 +15,9 @@ import os
 display = Display(visible=0, size=(800, 600))
 display.start()
 
-df = pd.read_csv(r"ten.csv")
+# df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-# df = pd.DataFrame([["livescore.com"]], columns=["website"])
+df = pd.DataFrame([["livescore.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -161,6 +161,7 @@ def visitWebsite(df):
     # , desired_capabilities=dc
 
     os.mkdir("server/output/" + df["website"][i])
+    os.mkdir("server/output/" + df["website"][i] + "/response")
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
     driver.execute_script("window.scrollTo(0, 200)")
     requests.post(

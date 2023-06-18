@@ -155,6 +155,21 @@ function onEvent(debuggeeId, message, params) {
             }).then(res => {
                 console.log("Response complete! response");
             });
+
+            fetch(`http://localhost:${port}/respfile`, {
+                method: "POST",
+                body: JSON.stringify({
+                    "request_id": params.requestId,
+                    "response": response.body,
+                }),
+                mode: 'cors',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    "Content-Type": "application/json"
+                }
+            }).then(res => {
+                console.log("Response complete! response");
+            });
         });
     }
 

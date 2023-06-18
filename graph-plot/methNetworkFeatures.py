@@ -46,7 +46,6 @@ def dicToExcel(dict, path):
         "parent_method-req-sent",
         "descendant_of_fingerprinting",
         "ascendant_of_fingerprinting",
-
     ]
     df.to_excel(path, index=False)
 
@@ -162,7 +161,11 @@ def main():
                     and "chrome-extension" not in key
                 ):
                     methd_ids.append(data[key][0])
-                    methd_dic[data[key][0]] = [ key.split("@")[1], key.split("@")[2], data[key][2] + data[key][3]]
+                    methd_dic[data[key][0]] = [
+                        key.split("@")[1],
+                        key.split("@")[2],
+                        data[key][2] + data[key][3],
+                    ]
 
                 if data[key][1] == "Storage":
                     storage_ids.append(data[key][0])
@@ -258,14 +261,14 @@ def main():
                         methods[key][19] += 1
                     if int(node_id) in storage_ids:
                         methods[key][21] += 1
-                
+
                 immediate_parents = graph.predecessors(str(key))
                 for node_id in immediate_parents:
                     if int(node_id) in methd_ids:
                         # parent method node id
-                        methods[key][22] =  int(node_id)
+                        methods[key][22] = int(node_id)
                         # num of requests sent by parent method for instance based
-                        methods[key][23] =  methd_dic[int(node_id)][2]
+                        methods[key][23] = methd_dic[int(node_id)][2]
                         break
 
             fingerprinting_ids = []

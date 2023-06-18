@@ -130,7 +130,13 @@
 def getInitiator(stack):
     if len(stack["callFrames"]) != 0:
         return (
-            stack["callFrames"][0]["url"] + "@" + stack["callFrames"][0]["functionName"]
+            stack["callFrames"][0]["url"]
+            + "@"
+            + stack["callFrames"][0]["functionName"]
+            + "@"
+            + str(stack["callFrames"][0]["lineNumber"])
+            + "@"
+            + str(stack["callFrames"][0]["columnNumber"])
         )
     else:
         return getInitiator(stack["parent"])

@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
 const cors = require('cors');
+const fs = require('fs');
 
 const jsonfile = require('jsonfile');
 let website = ['null'];
@@ -42,6 +43,15 @@ async function insertResponse(newHttpResp, website) {
     }, function(err) {
         if (err) console.error(err);
     })
+}
+
+async function saveResponse(request_id, body, website) {
+    const file = 'output/' + website + '/response/'+ request_id + ".txt";
+    fs.writeFile(file, body, (err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
 }
 
 async function insertInfo(newInfo, website) {
@@ -106,6 +116,11 @@ app.post('/requestinfo', (req, res) => {
 app.post('/response', (req, res) => {
     insertResponse(req.body, website[0]);
     res.send("response-success");
+})
+
+app.post('/respfile', (req, res) => {
+    saveResponse(req.body.request_id,req.body.response,website[0]);
+    res.send("saveresponse-success");
 })
 
 app.post('/cookiestorage', (req, res) => {

@@ -66,6 +66,62 @@ def dicToExcel(dict, path):
         "num_global",
         "num_script",
     ]
+
+    # mapping lines to functions
+    methds = {}
+    for i in df.index:
+        methd_name = df["method_name"][i].split("@")[0]
+        if df["script_name"][i] + "@" + methd_name not in methds.keys():
+            # "storage_getter" - 0
+            # "storage_setter" - 1
+            # "cookie_getter" - 2
+            # "cookie_setter" - 3
+            # "getAttribute" - 4
+            # "setAttribute" - 5
+            # "addEventListener" - 6
+            # "removeAttribute" - 7
+            # "removeEventListener" - 8
+            # "sendBeacon" - 9
+            methds[df["script_name"][i] + "@" + methd_name] = [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+            ]
+        methds[df["script_name"][i] + "@" + methd_name][0] += df["storage_getter"][i]
+        methds[df["script_name"][i] + "@" + methd_name][1] += df["storage_setter"][i]
+        methds[df["script_name"][i] + "@" + methd_name][2] += df["cookie_getter"][i]
+        methds[df["script_name"][i] + "@" + methd_name][3] += df["cookie_setter"][i]
+        methds[df["script_name"][i] + "@" + methd_name][4] += df["getAttribute"][i]
+        methds[df["script_name"][i] + "@" + methd_name][5] += df["setAttribute"][i]
+        methds[df["script_name"][i] + "@" + methd_name][6] += df["addEventListener"][i]
+        methds[df["script_name"][i] + "@" + methd_name][7] += df["removeAttribute"][i]
+        methds[df["script_name"][i] + "@" + methd_name][8] += df["removeEventListener"][
+            i
+        ]
+        methds[df["script_name"][i] + "@" + methd_name][9] += df["sendBeacon"][i]
+
+    for i in df.index:
+        methd_name = df["method_name"][i].split("@")[0]
+        df["storage_getter"][i] = methds[df["script_name"][i] + "@" + methd_name][0]
+        df["storage_setter"][i] = methds[df["script_name"][i] + "@" + methd_name][1]
+        df["cookie_getter"][i] = methds[df["script_name"][i] + "@" + methd_name][2]
+        df["cookie_setter"][i] = methds[df["script_name"][i] + "@" + methd_name][3]
+        df["getAttribute"][i] = methds[df["script_name"][i] + "@" + methd_name][4]
+        df["setAttribute"][i] = methds[df["script_name"][i] + "@" + methd_name][5]
+        df["addEventListener"][i] = methds[df["script_name"][i] + "@" + methd_name][6]
+        df["removeAttribute"][i] = methds[df["script_name"][i] + "@" + methd_name][7]
+        df["removeEventListener"][i] = methds[df["script_name"][i] + "@" + methd_name][
+            8
+        ]
+        df["sendBeacon"][i] = methds[df["script_name"][i] + "@" + methd_name][9]
+
     df.to_excel(path)
 
 
@@ -199,10 +255,10 @@ def main():
                         if "https://" in key.split("@")[1]:
                             methods[(data[key][0])] = [
                                 key.split("@")[1],
-                                key.split("@")[2],
+                                key.split("@", 2)[2],
                             ]
                         else:
-                            methods[(data[key][0])] = ["", key.split("@")[2]]
+                            methods[(data[key][0])] = ["", key.split("@", 2)[2]]
 
                     # label as functional (label -> 0)
                     if data[key][2] == 0 and data[key][3] != 0:

@@ -43,8 +43,25 @@ def CheckAncestoralNodes(callstack):
 def rec_stack_checker(stack, unique_scripts):
     # append unique script_url's
     for item in stack["callFrames"]:
-        if item["url"] + "@" + item["functionName"] not in unique_scripts:
-            unique_scripts.append(item["url"] + "@" + item["functionName"])
+        if (
+            item["url"]
+            + "@"
+            + item["functionName"]
+            + "@"
+            + str(item["lineNumber"])
+            + "@"
+            + str(item["columnNumber"])
+            not in unique_scripts
+        ):
+            unique_scripts.append(
+                item["url"]
+                + "@"
+                + item["functionName"]
+                + "@"
+                + str(item["lineNumber"])
+                + "@"
+                + str(item["columnNumber"])
+            )
     # if parent object doen't exist return (base-case)
     if "parent" not in stack.keys():
         return
@@ -55,7 +72,7 @@ def rec_stack_checker(stack, unique_scripts):
 
 def addCallStackInfo(nodes, edges, callstack, TC, FC, classlabel):
     unique_scripts = CheckAncestoralNodes(callstack)
-    # unique_scripts = [stacktop1@method, stacktop2@method, stacktop3@method, ...]
+    # unique_scripts = [stacktop1@method@line@column, stacktop2@method@line@column, stacktop3@method@line@column, ...]
     for i in range(1, len(unique_scripts)):
         # stacktop1
         tar = addNode(
@@ -63,7 +80,7 @@ def addCallStackInfo(nodes, edges, callstack, TC, FC, classlabel):
             "ScriptMethod@"
             + unique_scripts[i - 1].split("@")[0]
             + "@"
-            + unique_scripts[i - 1].split("@")[1],
+            + unique_scripts[i - 1].split("@", 1)[1],
             "ScriptMethod",
             TC,
             FC,
@@ -86,7 +103,7 @@ def addCallStackInfo(nodes, edges, callstack, TC, FC, classlabel):
             "ScriptMethod@"
             + unique_scripts[i].split("@")[0]
             + "@"
-            + unique_scripts[i].split("@")[1],
+            + unique_scripts[i].split("@", 1)[1],
             "ScriptMethod",
             TC,
             FC,
