@@ -17,7 +17,7 @@ display.start()
 
 # df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-df = pd.DataFrame([["livescore.com"]], columns=["website"])
+df = pd.DataFrame([["amazon.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -139,6 +139,20 @@ def addBreakPoints(filename):
     f.close()
 
 
+def saveResponses(filename):
+    with open(filename + "/request.json") as file:
+        for line in file:
+            dataset = json.loads(line)
+            try:
+                response = requests.get(dataset["http_req"])
+                with open(
+                    filename + "/response/" + dataset["request_id"] + ".txt", "w"
+                ) as file:
+                    file.write(response.text)
+            except Exception as e:
+                print(e, dataset["http_req"])
+
+
 # selenium to visit website and get logs
 def visitWebsite(df):
     # try:
@@ -162,6 +176,7 @@ def visitWebsite(df):
 
     os.mkdir("server/output/" + df["website"][i])
     os.mkdir("server/output/" + df["website"][i] + "/response")
+    os.mkdir("server/output/" + df["website"][i] + "/surrogate")
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
     driver.execute_script("window.scrollTo(0, 200)")
     requests.post(
@@ -218,6 +233,9 @@ for i in df.index:
 
             # visit website
             visitWebsite(df)
+
+            # save responses
+            saveResponses("server/output/" + df["website"][i])
 
             count += 1
             with open("logs.txt", "w") as log:
