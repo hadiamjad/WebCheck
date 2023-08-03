@@ -91,10 +91,11 @@ def main():
                         column_num = int(method.split("@")[2]) + 1
                         try:
                             logging.info(
-                                "Replacing function call at line %s column %s for %s",
+                                "Replacing function call at line %s column %s for %s and request_id %s",
                                 line_num,
                                 column_num,
                                 script_name,
+                                req_id,
                             )
                             status = replace_function_call(
                                 folder + f + "/response/" + req_id + ".txt",
@@ -107,25 +108,23 @@ def main():
                             else:
                                 logs["replace_function_call_fail"] += 1
                                 logging.info(
-                                    "Crashed replacing function call at line %s column %s for %s",
+                                    "Crashed replacing function call at line %s column %s for %s and error end index not found",
                                     line_num,
                                     column_num,
                                     script_name,
                                 )
-                        except:
+                        except Exception as e:
                             logging.info(
-                                "Crashed replacing function call at line %s column %s for %s",
+                                "Crashed replacing function call at line %s column %s for %s and error %s",
                                 line_num,
                                 column_num,
                                 script_name,
+                                e,
                             )
                             logs["replace_function_call_fail"] += 1
         json.dump(request_id, open(folder + f + "/request_id.json", "w"))
+        json.dump(logs, open(folder + f + "/surrogate_logs.json", "w"))
         logging.info("Total Logs %s", logs)
-        # json.dump(logs, open(folder + f + "/function_logs.json", "w"))
-    # except Exception as e:
-    #     print("error:", e)
-    #     print(r"Crashed: " + str(f) + " website: " + f)
 
 
 if __name__ == "__main__":
