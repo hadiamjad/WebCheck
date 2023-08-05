@@ -47,85 +47,87 @@ def setup_logging(log_file):
 def main():
     fold = os.listdir("server/output")
     folder = "server/output/"
+    # save logs
+    log_file = folder + "/function_logs.json"
+    setup_logging(log_file)
 
     for f in fold:
-        # save logs
-        log_file = folder + f + "/function_logs.json"
-        setup_logging(log_file)
+        try:
+            print("generating-surrogates: %s", f)
+            # main stuff
+            logging.info("generating-surrogates: %s", f)
+            # {request_url: request_id}
+            request_id = request_response_dic(folder + f + "/request.json")
+            # {script_name/script_url: [method_name@line_number@column_number, ...]}
+            tracking_functions = get_tracking_functions(folder + f + "/features.xlsx")
+            # logs
+            logs = {
+                "script_not_in_request_file": 0,
+                "inline_script": 0,
+                "replace_function_call_fail": 0,
+                "success": 0,
+            }
 
-        # main stuff
-        logging.info("generating-surrogates: %s", f)
-        # {request_url: request_id}
-        request_id = request_response_dic(folder + f + "/request.json")
-        # {script_name/script_url: [method_name@line_number@column_number, ...]}
-        tracking_functions = get_tracking_functions(folder + f + "/features.xlsx")
-        # logs
-        logs = {
-            "script_not_in_request_file": 0,
-            "inline_script": 0,
-            "replace_function_call_fail": 0,
-            "success": 0,
-        }
-
-        for script_name in tracking_functions:
-            # If the script's request_id not found in the dataset
-            if script_name not in request_id:
-                for method in tracking_functions[script_name]:
-                    logs["script_not_in_request_file"] += 1
-                    logging.info(
-                        "script_not_in_request_file %s %s", script_name, method
-                    )
-            else:
-                req_id = request_id[script_name]
-                if not contains_only_numbers(req_id):
-                    logging.info(
-                        "inline_script %s %s",
-                        script_name,
-                        tracking_functions[script_name],
-                    )
-                    # print(f"Inline script {req_id} for {script_name}")
-                    logs["inline_script"] += 1
-                else:
+            for script_name in tracking_functions:
+                # If the script's request_id not found in the dataset
+                if script_name not in request_id:
                     for method in tracking_functions[script_name]:
-                        line_num = int(method.split("@")[1]) + 1
-                        column_num = int(method.split("@")[2]) + 1
-                        try:
-                            logging.info(
-                                "Replacing function call at line %s column %s for %s and request_id %s",
-                                line_num,
-                                column_num,
-                                script_name,
-                                req_id,
-                            )
-                            status = replace_function_call(
-                                folder + f + "/response/" + req_id + ".txt",
-                                folder + f + "/surrogate/" + req_id + "_modified.txt",
-                                line_num,
-                                column_num,
-                            )
-                            if status == 0:
-                                logs["success"] += 1
-                            else:
-                                logs["replace_function_call_fail"] += 1
+                        logs["script_not_in_request_file"] += 1
+                        logging.info(
+                            "script_not_in_request_file %s %s", script_name, method
+                        )
+                else:
+                    req_id = request_id[script_name]
+                    if not contains_only_numbers(req_id):
+                        logging.info(
+                            "inline_script %s %s",
+                            script_name,
+                            tracking_functions[script_name],
+                        )
+                        # print(f"Inline script {req_id} for {script_name}")
+                        logs["inline_script"] += 1
+                    else:
+                        for method in tracking_functions[script_name]:
+                            line_num = int(method.split("@")[1]) + 1
+                            column_num = int(method.split("@")[2]) + 1
+                            try:
                                 logging.info(
-                                    "Crashed replacing function call at line %s column %s for %s and error end index not found",
+                                    "Replacing function call at line %s column %s for %s and request_id %s",
                                     line_num,
                                     column_num,
                                     script_name,
+                                    req_id,
                                 )
-                        except Exception as e:
-                            logging.info(
-                                "Crashed replacing function call at line %s column %s for %s and error %s",
-                                line_num,
-                                column_num,
-                                script_name,
-                                e,
-                            )
-                            logs["replace_function_call_fail"] += 1
-        json.dump(request_id, open(folder + f + "/request_id.json", "w"))
-        json.dump(logs, open(folder + f + "/surrogate_logs.json", "w"))
-        logging.info("Total Logs %s", logs)
-
+                                status = replace_function_call(
+                                    folder + f + "/response/" + req_id + ".txt",
+                                    folder + f + "/surrogate/" + req_id + "_modified.txt",
+                                    line_num,
+                                    column_num,
+                                )
+                                if status == 0:
+                                    logs["success"] += 1
+                                else:
+                                    logs["replace_function_call_fail"] += 1
+                                    logging.info(
+                                        "Crashed replacing function call at line %s column %s for %s and error end index not found",
+                                        line_num,
+                                        column_num,
+                                        script_name,
+                                    )
+                            except Exception as e:
+                                logging.info(
+                                    "Crashed replacing function call at line %s column %s for %s and error %s",
+                                    line_num,
+                                    column_num,
+                                    script_name,
+                                    e,
+                                )
+                                logs["replace_function_call_fail"] += 1
+            json.dump(request_id, open(folder + f + "/request_id.json", "w"))
+            json.dump(logs, open(folder + f + "/surrogate_logs.json", "w"))
+            logging.info("Total Logs %s", logs)
+        except:
+            print("Error in generating-surrogates: %s", f)
 
 if __name__ == "__main__":
     main()

@@ -150,61 +150,60 @@ def saveResponses(filename):
                 ) as file:
                     file.write(response.text)
             except Exception as e:
-                print(e, dataset["http_req"])
+                pass
 
 
 # selenium to visit website and get logs
 def visitWebsite(df):
-    # try:
-    dic = {}
-    # extension filepath
-    ext_file = "extension"
+    try:
+        dic = {}
+        # extension filepath
+        ext_file = "extension"
 
-    opt = webdriver.ChromeOptions()
-    # devtools necessary for complete network stack capture
-    opt.add_argument("--auto-open-devtools-for-tabs")
-    # loads extension
-    opt.add_argument("load-extension=" + ext_file)
-    # important for linux
-    opt.add_argument("--no-sandbox")
+        opt = webdriver.ChromeOptions()
+        # devtools necessary for complete network stack capture
+        opt.add_argument("--auto-open-devtools-for-tabs")
+        # loads extension
+        opt.add_argument("load-extension=" + ext_file)
+        # important for linux
+        opt.add_argument("--no-sandbox")
 
-    opt.add_argument("--disable-dev-shm-usage")
+        opt.add_argument("--disable-dev-shm-usage")
 
-    # dc = DesiredCapabilities.CHROME
-    # dc["goog:loggingPrefs"] = {"browser": "ALL"}
-    # , desired_capabilities=dc
+        # dc = DesiredCapabilities.CHROME
+        # dc["goog:loggingPrefs"] = {"browser": "ALL"}
+        # , desired_capabilities=dc
 
-    os.mkdir("server/output/" + df["website"][i])
-    os.mkdir("server/output/" + df["website"][i] + "/response")
-    os.mkdir("server/output/" + df["website"][i] + "/surrogate")
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
-    driver.execute_script("window.scrollTo(0, 200)")
-    requests.post(
-        url="http://localhost:3000/complete", data={"website": df["website"][i]}
-    )
+        os.mkdir("server/output/" + df["website"][i])
+        os.mkdir("server/output/" + df["website"][i] + "/response")
+        os.mkdir("server/output/" + df["website"][i] + "/surrogate")
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
+        driver.execute_script("window.scrollTo(0, 200)")
+        requests.post(
+            url="http://localhost:3000/complete", data={"website": df["website"][i]}
+        )
 
-    driver.get(r"https://" + df["website"][i])
+        driver.get(r"https://" + df["website"][i])
 
-    # sleep
-    time.sleep(40)
+        # sleep
+        time.sleep(40)
 
-    # dictionary collecting logs
-    # 1: Logs 2: PageSource
-    # dic[df["website"][i]] = []
-    # # saving logs in dictionary
-    # dic[df["website"][i]].append(driver.get_log("browser"))
-    # dic[df["website"][i]].append(driver.page_source)
-    # # saving it in csv
-    # pd.DataFrame(dic).to_csv("server/output/" + df["website"][i] + "/logs.csv")
-    # driver.quit
-    driver.quit()
+        # dictionary collecting logs
+        # 1: Logs 2: PageSource
+        # dic[df["website"][i]] = []
+        # # saving logs in dictionary
+        # dic[df["website"][i]].append(driver.get_log("browser"))
+        # dic[df["website"][i]].append(driver.page_source)
+        # # saving it in csv
+        # pd.DataFrame(dic).to_csv("server/output/" + df["website"][i] + "/logs.csv")
+        # driver.quit
+        driver.quit()
 
-
-# except:
-#     try:
-#         driver.quit()
-#     except:
-#         pass
+    except:
+        try:
+            driver.quit()
+        except:
+            pass
 
 
 count = 0
