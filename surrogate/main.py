@@ -100,7 +100,11 @@ def main():
                                 )
                                 status = replace_function_call(
                                     folder + f + "/response/" + req_id + ".txt",
-                                    folder + f + "/surrogate/" + req_id + "_modified.txt",
+                                    folder
+                                    + f
+                                    + "/surrogate/"
+                                    + req_id
+                                    + "_modified.txt",
                                     line_num,
                                     column_num,
                                 )
@@ -128,6 +132,7 @@ def main():
             logging.info("Total Logs %s", logs)
         except:
             print("Error in generating-surrogates: %s", f)
+
 
 if __name__ == "__main__":
     main()
