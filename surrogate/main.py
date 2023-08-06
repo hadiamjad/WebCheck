@@ -48,12 +48,12 @@ def main():
     fold = os.listdir("server/output")
     folder = "server/output/"
     # save logs
-    log_file = folder + "/function_logs.json"
+    log_file = "function_logs.json"
     setup_logging(log_file)
 
     for f in fold:
         try:
-            print("generating-surrogates: %s", f)
+            print("generating-surrogates:", f)
             # main stuff
             logging.info("generating-surrogates: %s", f)
             # {request_url: request_id}
@@ -85,7 +85,7 @@ def main():
                             tracking_functions[script_name],
                         )
                         # print(f"Inline script {req_id} for {script_name}")
-                        logs["inline_script"] += 1
+                        logs["inline_script"] += len(tracking_functions[script_name])
                     else:
                         for method in tracking_functions[script_name]:
                             line_num = int(method.split("@")[1]) + 1
@@ -131,7 +131,7 @@ def main():
             json.dump(logs, open(folder + f + "/surrogate_logs.json", "w"))
             logging.info("Total Logs %s", logs)
         except:
-            print("Error in generating-surrogates: %s", f)
+            print("Error in generating-surrogates:", f)
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ display.start()
 
 # df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-df = pd.DataFrame([["cloudflare.com"]], columns=["website"])
+df = pd.DataFrame([["baidu.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -177,6 +177,7 @@ def visitWebsite(df):
         os.mkdir("server/output/" + df["website"][i])
         os.mkdir("server/output/" + df["website"][i] + "/response")
         os.mkdir("server/output/" + df["website"][i] + "/surrogate")
+        # ChromeDriverManager(driver_version="114.0.5735.90").install()
         driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
         driver.execute_script("window.scrollTo(0, 200)")
         requests.post(

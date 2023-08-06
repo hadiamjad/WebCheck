@@ -125,7 +125,7 @@ def addCallStackInfo(nodes, edges, callstack, TC, FC, classlabel):
 
 
 def createWebGraphWithCallStack(url):
-    folder = "/home/gulzar/TrackerSift/MethGraph/WebCheck/server/output/" + url + "/"
+    folder = "/home/grads/hadiamjad/repositories/WebCheck/server/output/" + url + "/"
 
     # name: [id, type, TC, FC, label]
     nodes = {}

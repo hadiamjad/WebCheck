@@ -1,0 +1,37 @@
+2023-08-06 10:56:16,708 - INFO - generating-surrogates: baidu.com
+2023-08-06 10:56:16,878 - INFO - Replacing function call at line 92 column 348 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,878 - INFO - Replacing function call at line 96 column 100 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,879 - INFO - Replacing function call at line 97 column 73 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,895 - INFO - Replacing function call at line 68 column 148 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,904 - INFO - Replacing function call at line 67 column 124 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,913 - INFO - Replacing function call at line 79 column 182 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,922 - INFO - Replacing function call at line 94 column 204 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,929 - INFO - Replacing function call at line 67 column 372 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,938 - INFO - Replacing function call at line 75 column 145 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,947 - INFO - Replacing function call at line 79 column 111 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,956 - INFO - Replacing function call at line 94 column 66 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,966 - INFO - Replacing function call at line 87 column 38 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,975 - INFO - Replacing function call at line 1 column 284 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,988 - INFO - Replacing function call at line 1 column 239 for https://pss.bdstatic.com/static/superman/js/sbase-16798b3ae3.js and request_id 10122.52
+2023-08-06 10:56:16,997 - INFO - Replacing function call at line 29 column 3 for https://pss.bdstatic.com/static/superman/js/min_super-0c0b791c0d.js and request_id 10122.55
+2023-08-06 10:56:16,997 - INFO - Replacing function call at line 30 column 415 for https://pss.bdstatic.com/static/superman/js/min_super-0c0b791c0d.js and request_id 10122.55
+2023-08-06 10:56:16,997 - INFO - Replacing function call at line 30 column 428 for https://pss.bdstatic.com/static/superman/js/min_super-0c0b791c0d.js and request_id 10122.55
+2023-08-06 10:56:16,998 - INFO - Crashed replacing function call at line 30 column 428 for https://pss.bdstatic.com/static/superman/js/min_super-0c0b791c0d.js and error end index not found
+2023-08-06 10:56:16,998 - INFO - Replacing function call at line 124 column 239 for https://pss.bdstatic.com/static/superman/js/min_super-0c0b791c0d.js and request_id 10122.55
+2023-08-06 10:56:17,014 - INFO - Replacing function call at line 122 column 269 for https://pss.bdstatic.com/static/superman/js/min_super-0c0b791c0d.js and request_id 10122.55
+2023-08-06 10:56:17,023 - INFO - inline_script https://www.baidu.com/ ['@1619@11']
+2023-08-06 10:56:17,023 - INFO - Replacing function call at line 8 column 442 for https://pss.bdstatic.com/static/superman/js/components/hotsearch-5af0f864cf.js and request_id 10122.56
+2023-08-06 10:56:17,023 - INFO - Crashed replacing function call at line 8 column 442 for https://pss.bdstatic.com/static/superman/js/components/hotsearch-5af0f864cf.js and error end index not found
+2023-08-06 10:56:17,023 - INFO - Replacing function call at line 11 column 397 for https://pss.bdstatic.com/static/superman/js/components/hotsearch-5af0f864cf.js and request_id 10122.56
+2023-08-06 10:56:17,023 - INFO - Replacing function call at line 11 column 465 for https://pss.bdstatic.com/static/superman/js/components/hotsearch-5af0f864cf.js and request_id 10122.56
+2023-08-06 10:56:17,023 - INFO - Crashed replacing function call at line 11 column 465 for https://pss.bdstatic.com/static/superman/js/components/hotsearch-5af0f864cf.js and error end index not found
+2023-08-06 10:56:17,023 - INFO - Replacing function call at line 13 column 58 for https://pss.bdstatic.com/static/superman/js/components/aging-tools-35648b2e67.js and request_id 10122.341
+2023-08-06 10:56:17,024 - INFO - Replacing function call at line 13 column 283 for https://pss.bdstatic.com/static/superman/js/components/aging-tools-35648b2e67.js and request_id 10122.341
+2023-08-06 10:56:17,024 - INFO - Replacing function call at line 13 column 142 for https://pss.bdstatic.com/static/superman/js/components/aging-tools-35648b2e67.js and request_id 10122.341
+2023-08-06 10:56:17,032 - INFO - script_not_in_request_file https://pss.bdstatic.com/r/www/cache/static/protocol/https/amd_modules/ baidu/aging-tools-pc_63487d8.js@i.logSend@13@25
+2023-08-06 10:56:17,032 - INFO - script_not_in_request_file https://pss.bdstatic.com/r/www/cache/static/protocol/https/amd_modules/ baidu/aging-tools-pc_63487d8.js@i.showTools@15@358
+2023-08-06 10:56:17,032 - INFO - script_not_in_request_file https://pss.bdstatic.com/r/www/cache/static/protocol/https/amd_modules/ baidu/aging-tools-pc_63487d8.js@i.init@13@267
+2023-08-06 10:56:17,032 - INFO - script_not_in_request_file https://pss.bdstatic.com/r/www/cache/static/protocol/https/amd_modules/ baidu/aging-tools-pc_63487d8.js@i.attached@11@164
+2023-08-06 10:56:17,032 - INFO - Replacing function call at line 1189 column 662 for https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_f4c9bde.js and request_id 10122.51
+2023-08-06 10:56:17,034 - INFO - Replacing function call at line 1201 column 221 for https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_f4c9bde.js and request_id 10122.51
+2023-08-06 10:56:17,036 - INFO - Total Logs {'script_not_in_request_file': 4, 'inline_script': 1, 'replace_function_call_fail': 3, 'success': 24}
