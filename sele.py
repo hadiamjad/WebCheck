@@ -1,23 +1,30 @@
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import MoveTargetOutOfBoundsException
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 import time
 import json
 import shutil
-
 from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
+import httpx
+import asyncio
+import random
+import tldextract
+import chromedriver_autoinstaller
 
 
 # virtual display
-display = Display(visible=0, size=(800, 600))
+display = Display(visible=0, size=(1000, 1000))
 display.start()
 
-# df = pd.read_csv(r"ten.csv")
+df = pd.read_csv(r"csv/3k.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-df = pd.DataFrame([["baidu.com"]], columns=["website"])
+# df = pd.DataFrame([["nbc.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -57,7 +64,6 @@ def getStorageScriptFromStack(script):
         }
     except:
         return None
-
 
 def addBreakPoints(filename):
     arr = []
@@ -138,23 +144,86 @@ def addBreakPoints(filename):
     f.write(str(arr).replace("'", '"'))
     f.close()
 
+async def saveResponses(filename):
+    async with httpx.AsyncClient() as client:
+        try:
+            with open(filename + "/request.json") as file:
+                tasks = []
+                for line in file:
+                    dataset = json.loads(line)
+                    task = asyncio.create_task(save_response(client, filename, dataset))
+                    tasks.append(task)
+                await asyncio.gather(*tasks)
+        except Exception as e:
+            pass
 
-def saveResponses(filename):
-    with open(filename + "/request.json") as file:
-        for line in file:
-            dataset = json.loads(line)
-            try:
-                response = requests.get(dataset["http_req"])
-                with open(
-                    filename + "/response/" + dataset["request_id"] + ".txt", "w"
-                ) as file:
-                    file.write(response.text)
-            except Exception as e:
-                pass
+async def save_response(client, filename, dataset):
+    try:
+        response = await client.get(dataset["http_req"])
+        response_text = response.text
+        response_filename = os.path.join(filename, "response", dataset["request_id"] + ".txt")
+        await asyncio.to_thread(write_to_file, response_filename, response_text)
+    except Exception as e:
+        pass
+
+def write_to_file(filename, data):
+    with open(filename, "w") as file:
+        file.write(data)
+
+def scroll_down(driver):
+    at_bottom = False
+    while random.random() > 0.20 and not at_bottom:
+        driver.execute_script(
+            "window.scrollBy(0,%d)" % (10 + int(200 * random.random()))
+        )
+        at_bottom = driver.execute_script(
+            "return (((window.scrollY + window.innerHeight ) + 100 "
+            "> document.body.clientHeight ))"
+        )
+        time.sleep(0.5 + random.random())
+
+# get etld+1 of the given url
+def get_etldp1(url) -> str:
+    domain = tldextract.extract(url)
+    domain = domain.domain + "." + domain.suffix
+    return domain
 
 
+def random_mouse_moves(webdriver, num_moves=5, internal_pages=5):
+    action = ActionChains(webdriver)
+    
+    print("moving cursor randomly")
+    for _ in range(num_moves):
+        # bot mitigation 1: move the randomly around a number of times
+        random_x = random.randint(0, 80)
+        random_y = random.randint(0, 80)
+        
+        action.move_by_offset(random_x, random_y)
+        action.perform()
+
+    # bot mitigation 2: scroll in random intervals down page
+    # borrowed implementation from OpenWPM
+    print("scrolling down webpage")
+    scroll_down(webdriver)
+
+    # capturing internal pages
+    print("capturing internal pages")
+    parent_domain = get_etldp1(webdriver.current_url)
+    landing_pages = []
+    anchor_tags = webdriver.find_elements(By.TAG_NAME, 'a')  # Use find_elements instead of find_element
+    for anchor_tag in anchor_tags:
+        element_url = anchor_tag.get_attribute('href')
+        if element_url is not None:
+            dom = get_etldp1(element_url)
+            if parent_domain == dom and element_url != webdriver.current_url:
+                if len(landing_pages) == internal_pages:
+                    break
+                if element_url not in landing_pages:
+                    landing_pages.append(element_url)
+    return landing_pages
+            
 # selenium to visit website and get logs
-def visitWebsite(df):
+def visitWebsite(df, sleep, mouse_move):
     try:
         dic = {}
         # extension filepath
@@ -177,9 +246,9 @@ def visitWebsite(df):
         os.mkdir("server/output/" + df["website"][i])
         os.mkdir("server/output/" + df["website"][i] + "/response")
         os.mkdir("server/output/" + df["website"][i] + "/surrogate")
-        # ChromeDriverManager(driver_version="114.0.5735.90").install()
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
-        driver.execute_script("window.scrollTo(0, 200)")
+        # ChromeDriverManager(driver_version="114.0.5735.16").install()
+        chromedriver_autoinstaller.install()
+        driver = webdriver.Chrome(options=opt)
         requests.post(
             url="http://localhost:3000/complete", data={"website": df["website"][i]}
         )
@@ -187,7 +256,20 @@ def visitWebsite(df):
         driver.get(r"https://" + df["website"][i])
 
         # sleep
-        time.sleep(40)
+        time.sleep(sleep)
+
+        if mouse_move == True:
+            # for coverage
+            pages = random_mouse_moves(driver)
+        
+            for page in pages:
+                try:
+                    print("Visiting internal page", page)
+                    driver.get(page)
+                    time.sleep(20)
+                except:
+                    pass
+
 
         # dictionary collecting logs
         # 1: Logs 2: PageSource
@@ -207,12 +289,11 @@ def visitWebsite(df):
             pass
 
 
-count = 0
+count = 1222
 
 for i in df.index:
     try:
-        if i < 0:
-            count += 1
+        if i < 1300:
             pass
         else:
             # clear breakpoints
@@ -224,7 +305,7 @@ for i in df.index:
             f.close()
 
             # visit website
-            visitWebsite(df)
+            visitWebsite(df, 40, False)
 
             # update breakpoints list
             addBreakPoints("server/output/" + df["website"][i])
@@ -232,10 +313,11 @@ for i in df.index:
             shutil.rmtree("server/output/" + df["website"][i])
 
             # visit website
-            visitWebsite(df)
+            visitWebsite(df, 40, True)
 
             # save responses
-            saveResponses("server/output/" + df["website"][i])
+            print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])
+            asyncio.run(saveResponses("server/output/" + df["website"][i]))
 
             count += 1
             with open("logs.txt", "w") as log:
