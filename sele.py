@@ -22,9 +22,9 @@ import chromedriver_autoinstaller
 display = Display(visible=0, size=(1000, 1000))
 display.start()
 
-df = pd.read_csv(r"csv/3k.csv")
+df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-# df = pd.DataFrame([["nbc.com"]], columns=["website"])
+# df = pd.DataFrame([["audubon.org"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -289,11 +289,11 @@ def visitWebsite(df, sleep, mouse_move):
             pass
 
 
-count = 1222
+count = 0
 
 for i in df.index:
     try:
-        if i < 1300:
+        if i < 0:
             pass
         else:
             # clear breakpoints
@@ -313,7 +313,7 @@ for i in df.index:
             shutil.rmtree("server/output/" + df["website"][i])
 
             # visit website
-            visitWebsite(df, 40, True)
+            visitWebsite(df, 40, False)
 
             # save responses
             print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])

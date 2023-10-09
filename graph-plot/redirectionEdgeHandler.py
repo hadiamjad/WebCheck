@@ -62,12 +62,45 @@ import json
 """
 
 
+# def getRedirection(request_id, request_url, page_url):
+#     with open(page_url + "responses.json") as file:
+#         for line in file:
+#             dataset = json.loads(line)
+#             if dataset["request_id"] == request_id:
+#                 if dataset["response"]["url"] != request_url:
+#                     return dataset["response"]["url"]
+#                 else:
+#                     return None
+
+# Dictionary to store redirection info
+redirection_info_dict = {}
+
+# Function to get redirection URL
 def getRedirection(request_id, request_url, page_url):
+    global redirection_info_dict
+
+    # Check if the dictionary is populated, and if not, build it
+    if not redirection_info_dict:
+        redirection_info_dict = buildRedirectionInfoDict(request_id, request_url, page_url)
+
+    # Retrieve redirection URL for the given request_id
+    redirection_url = redirection_info_dict.get(request_id)
+
+    # If a redirection URL exists, return it as a single-element list
+    if redirection_url:
+        return redirection_url
+
+    # If no redirection URL is found, return an empty list
+    return None
+
+# Load the redirection info and build a dictionary
+def buildRedirectionInfoDict(request_id, request_url, page_url):
+    redirection_info_dict = {}
     with open(page_url + "responses.json") as file:
         for line in file:
             dataset = json.loads(line)
-            if dataset["request_id"] == request_id:
-                if dataset["response"]["url"] != request_url:
-                    return dataset["response"]["url"]
-                else:
-                    return None
+            request_id = dataset.get("request_id")
+            response_url = dataset["response"]["url"]
+            if request_id and response_url != request_url:
+                redirection_info_dict[request_id] = response_url
+    return redirection_info_dict
