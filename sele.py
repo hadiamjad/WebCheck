@@ -65,85 +65,6 @@ def getStorageScriptFromStack(script):
     except:
         return None
 
-def addBreakPoints(filename):
-    arr = []
-    with open(filename + "/request.json") as file:
-        for line in file:
-            dataset = json.loads(line)
-            if dataset["call_stack"]["type"] == "script":
-                val = getInitiator(dataset["call_stack"]["stack"])
-                if val is not None and val not in arr:
-                    arr.append(val)
-    url_inject = "chrome-extension://dkbabheepgaekgnabjadkefghhglljil/inject.js"
-    storage_setItem = {
-        "lineNumber": 5,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    storage_getItem = {
-        "lineNumber": 35,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    cookie_setItem = {
-        "lineNumber": 87,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    cookie_getItem = {
-        "lineNumber": 66,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    addEventList = {
-        "lineNumber": 112,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    sendBeac = {
-        "lineNumber": 143,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    removeEventList = {
-        "lineNumber": 174,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    setAttrib = {
-        "lineNumber": 206,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    getAttrib = {
-        "lineNumber": 237,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-    removeAttrib = {
-        "lineNumber": 267,
-        "url": url_inject,
-        "columnNumber": 4,
-    }
-
-    arr.append(storage_setItem)
-    arr.append(storage_getItem)
-    arr.append(cookie_setItem)
-    arr.append(cookie_getItem)
-    arr.append(addEventList)
-    arr.append(sendBeac)
-    arr.append(removeEventList)
-    arr.append(setAttrib)
-    arr.append(getAttrib)
-    arr.append(removeAttrib)
-
-    f = open(
-        "extension/breakpoint.json",
-        "w",
-    )
-    f.write(str(arr).replace("'", '"'))
-    f.close()
-
 async def saveResponses(filename):
     async with httpx.AsyncClient() as client:
         try:
@@ -270,15 +191,6 @@ def visitWebsite(df, sleep, mouse_move):
                 except:
                     pass
 
-
-        # dictionary collecting logs
-        # 1: Logs 2: PageSource
-        # dic[df["website"][i]] = []
-        # # saving logs in dictionary
-        # dic[df["website"][i]].append(driver.get_log("browser"))
-        # dic[df["website"][i]].append(driver.page_source)
-        # # saving it in csv
-        # pd.DataFrame(dic).to_csv("server/output/" + df["website"][i] + "/logs.csv")
         # driver.quit
         driver.quit()
 
@@ -309,11 +221,6 @@ for i in df.index:
 
             # update breakpoints list
             addBreakPoints("server/output/" + df["website"][i])
-            # delete previous crawl
-            shutil.rmtree("server/output/" + df["website"][i])
-
-            # visit website
-            visitWebsite(df, 40, False)
 
             # save responses
             print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])
