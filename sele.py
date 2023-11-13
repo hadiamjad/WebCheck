@@ -305,7 +305,7 @@ for i in df.index:
             f.close()
 
             # visit website
-            visitWebsite(df, 40, False)
+            visitWebsite(df, 40, True)
 
             # update breakpoints list
             # addBreakPoints("server/output/" + df["website"][i])
@@ -315,9 +315,9 @@ for i in df.index:
             # # visit website
             # visitWebsite(df, 40, False)
 
-            # save responses
-            # print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])
-            # asyncio.run(saveResponses("server/output/" + df["website"][i]))
+            save responses
+            print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])
+            asyncio.run(saveResponses("server/output/" + df["website"][i]))
 
             count += 1
             with open("logs.txt", "w") as log:

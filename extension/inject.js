@@ -18,17 +18,4 @@ checkMonkeyPatching = function() {
         });
 }
 
-let originalFunction2 = window.Storage.prototype.getItem;
-window.Storage.prototype.getItem = function(keyName) {
-    try{
-        //Hadi
-        originalFunction2.apply(this, arguments);
-        return;
-    }
-    catch(err){
-        originalFunction2.apply(this, arguments);
-    }
-}
-
-
 setInterval(checkMonkeyPatching, 5000);
