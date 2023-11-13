@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import json
 import shutil
-from pyvirtualdisplay import Display
+# from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
@@ -19,12 +19,12 @@ import chromedriver_autoinstaller
 
 
 # virtual display
-display = Display(visible=0, size=(1000, 1000))
-display.start()
+# display = Display(visible=0, size=(1000, 1000))
+# display.start()
 
-df = pd.read_csv(r"ten.csv")
+# df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-# df = pd.DataFrame([["audubon.org"]], columns=["website"])
+df = pd.DataFrame([["amazon.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -305,19 +305,19 @@ for i in df.index:
             f.close()
 
             # visit website
-            visitWebsite(df, 40, False)
+            visitWebsite(df, 4000, False)
 
             # update breakpoints list
-            addBreakPoints("server/output/" + df["website"][i])
+            # addBreakPoints("server/output/" + df["website"][i])
             # delete previous crawl
-            shutil.rmtree("server/output/" + df["website"][i])
+            # shutil.rmtree("server/output/" + df["website"][i])
 
-            # visit website
-            visitWebsite(df, 40, False)
+            # # visit website
+            # visitWebsite(df, 40, False)
 
             # save responses
-            print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])
-            asyncio.run(saveResponses("server/output/" + df["website"][i]))
+            # print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])
+            # asyncio.run(saveResponses("server/output/" + df["website"][i]))
 
             count += 1
             with open("logs.txt", "w") as log:
