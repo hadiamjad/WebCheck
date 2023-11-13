@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import json
 import shutil
-# from pyvirtualdisplay import Display
+from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
@@ -19,12 +19,12 @@ import chromedriver_autoinstaller
 
 
 # virtual display
-# display = Display(visible=0, size=(1000, 1000))
-# display.start()
+display = Display(visible=0, size=(1000, 1000))
+display.start()
 
-# df = pd.read_csv(r"ten.csv")
+df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-df = pd.DataFrame([["amazon.com"]], columns=["website"])
+# df = pd.DataFrame([["livescore.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -241,7 +241,7 @@ def visitWebsite(df, sleep, mouse_move):
 
         # dc = DesiredCapabilities.CHROME
         # dc["goog:loggingPrefs"] = {"browser": "ALL"}
-        # , desired_capabilities=dc
+        # # , desired_capabilities=dc
 
         os.mkdir("server/output/" + df["website"][i])
         os.mkdir("server/output/" + df["website"][i] + "/response")
@@ -305,7 +305,7 @@ for i in df.index:
             f.close()
 
             # visit website
-            visitWebsite(df, 4000, False)
+            visitWebsite(df, 40, False)
 
             # update breakpoints list
             # addBreakPoints("server/output/" + df["website"][i])
