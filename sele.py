@@ -296,22 +296,7 @@ for i in df.index:
         if i < 0:
             pass
         else:
-            # clear breakpoints
-            f = open(
-                "extension/breakpoint.json",
-                "w",
-            )
-            f.write("[]")
-            f.close()
-
-            # visit website
-            visitWebsite(df, 40, False)
-
-            # update breakpoints list
-            addBreakPoints("server/output/" + df["website"][i])
-            # delete previous crawl
-            shutil.rmtree("server/output/" + df["website"][i])
-
+            print(r"Started: " + str(i) + " website: " + df["website"][i])
             # visit website
             visitWebsite(df, 40, False)
 
