@@ -130,8 +130,8 @@ def main():
             json.dump(request_id, open(folder + f + "/request_id.json", "w"))
             json.dump(logs, open(folder + f + "/surrogate_logs.json", "w"))
             logging.info("Total Logs %s", logs)
-        except:
-            print("Error in generating-surrogates:", f)
+        except Exception as e:
+            print("Error in generating-surrogates:", f, e)
 
 
 if __name__ == "__main__":

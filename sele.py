@@ -24,7 +24,7 @@ display.start()
 
 df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-# df = pd.DataFrame([["audubon.org"]], columns=["website"])
+# df = pd.DataFrame([["crashplan.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -225,7 +225,6 @@ def random_mouse_moves(webdriver, num_moves=5, internal_pages=5):
 # selenium to visit website and get logs
 def visitWebsite(df, sleep, mouse_move):
     try:
-        dic = {}
         # extension filepath
         ext_file = "extension"
 
@@ -255,6 +254,25 @@ def visitWebsite(df, sleep, mouse_move):
 
         driver.get(r"https://" + df["website"][i])
 
+        # performance logs
+        dic = {"dom_content_loaded": 0, "dom_interactive": 0, "load_event_time": 0, "total_heap_size": 0, "used_heap_size": 0}
+        # Execute JavaScript to get performance timings
+        performance_timing = driver.execute_script("return window.performance.timing")
+        # Calculate the times for DOMContentLoaded and DOMInteractive
+        dom_content_loaded = performance_timing['domContentLoadedEventStart'] - performance_timing['navigationStart']
+        dom_interactive = performance_timing['domInteractive'] - performance_timing['navigationStart']
+        load_event_time = performance_timing['loadEventStart'] - performance_timing['navigationStart']
+        dic["load_event_time"] = load_event_time
+        dic["dom_content_loaded"] = dom_content_loaded
+        dic["dom_interactive"] = dom_interactive
+        # Execute JavaScript to get memory usage
+        memory_usage = driver.execute_script("return window.performance.memory")
+        # memory_usage is now a dictionary containing heap size information
+        total_heap_size = memory_usage['totalJSHeapSize']
+        used_heap_size = memory_usage['usedJSHeapSize']
+        dic["total_heap_size"] = total_heap_size
+        dic["used_heap_size"] = used_heap_size
+
         # sleep
         time.sleep(sleep)
 
@@ -270,6 +288,9 @@ def visitWebsite(df, sleep, mouse_move):
                 except:
                     pass
 
+        # saving performance logs as json
+        with open("server/output/" + df["website"][i] + "/performance.json", "w") as f:
+            json.dump(dic, f)
 
         # dictionary collecting logs
         # 1: Logs 2: PageSource

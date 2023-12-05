@@ -113,7 +113,7 @@ def addCallStackInfo(callstack, TC, FC, classlabel):
 
 
 def createWebGraphWithCallStack(url):
-    folder = "/home/grads/hadiamjad/repositories/speed-graph/server/output/" + url + "/"
+    folder = "server/output/" + url + "/"
     global edges
     # initial HTML iframe
     src = addNode("Network@https://www." + url + "/", "Network", 0, 0, -1)

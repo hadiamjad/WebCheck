@@ -3,7 +3,7 @@ from joblib import Parallel, delayed
 from populateGraphWithCallStack import createWebGraphWithCallStack
 lst = [0]
 def process_folder(folder):
-    fold = "/home/grads/hadiamjad/repositories/speed-graph/server/output/" + folder
+    fold = "server/output/" + folder
     graph_pdf_path = os.path.join(fold, "graph.pdf")
 
     print(graph_pdf_path)
