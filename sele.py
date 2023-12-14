@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import json
 import shutil
-from pyvirtualdisplay import Display
+# from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
@@ -19,12 +19,12 @@ import chromedriver_autoinstaller
 
 
 # virtual display
-display = Display(visible=0, size=(1000, 1000))
-display.start()
+# display = Display(visible=0, size=(1000, 1000))
+# display.start()
 
 df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-# df = pd.DataFrame([["crashplan.com"]], columns=["website"])
+# df = pd.DataFrame([["canvas.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -341,7 +341,7 @@ for i in df.index:
             asyncio.run(saveResponses("server/output/" + df["website"][i]))
 
             count += 1
-            with open("logs.txt", "w") as log:
+            with open("logs/logs.txt", "w") as log:
                 log.write(str(count))
                 log.close()
             print(r"Completed: " + str(i) + " website: " + df["website"][i])
@@ -350,6 +350,6 @@ for i in df.index:
     except Exception as e:
         os.system("pkill chrome")
         os.system("pkill google-chrome")
-        shutil.rmtree("server/output/" + df["website"][i])
+        # shutil.rmtree("server/output/" + df["website"][i])
         print("error:", e)
         print(r"Crashed: " + str(i) + " website: " + df["website"][i])

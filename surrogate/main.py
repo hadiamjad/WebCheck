@@ -48,7 +48,7 @@ def main():
     fold = os.listdir("server/output")
     folder = "server/output/"
     # save logs
-    log_file = "function_logs.json"
+    log_file = "logs/function_logs.json"
     setup_logging(log_file)
 
     for f in fold:

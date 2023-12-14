@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import json
 import shutil
-from pyvirtualdisplay import Display
+# from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
@@ -19,8 +19,8 @@ import chromedriver_autoinstaller
 
 
 # virtual display
-display = Display(visible=0, size=(1000, 1000))
-display.start()
+# display = Display(visible=0, size=(1000, 1000))
+# display.start()
 
 def extractDigits(lst):
     return list(map(lambda el: [el], lst))
@@ -369,7 +369,7 @@ for i in df.index:
 
 
             count += 1
-            with open("logs.txt", "w") as log:
+            with open("logs/logs.txt", "w") as log:
                 log.write(str(count))
                 log.close()
             print(r"Completed: " + str(i) + " website: " + df["website"][i])

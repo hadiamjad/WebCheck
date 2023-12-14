@@ -208,7 +208,7 @@ def main():
                 "server/output/" + f + "/",
             )
             count += 1
-            with open("label_logs.txt", "w") as log:
+            with open("logs/label_logs.txt", "w") as log:
                 log.write(str(count))
                 log.close()
         except:

@@ -22,7 +22,7 @@ def process_folder(folder):
         # Increment the counter after successful processing
         lst[0] += 1
         # Log the updated count to a file
-        with open("graph_logs.txt", "w") as count_file:
+        with open("logs/graph_logs.txt", "w") as count_file:
             count_file.write(str(lst[0]))
     except Exception as e:
         print("Error processing folder:", folder, e)
@@ -30,6 +30,7 @@ def process_folder(folder):
 
 def main():
     folders = os.listdir("server/output")
+    folders.remove(".DS_Store")
     num_jobs = len(folders)
     num_parallel_jobs = -1  # Use all available CPU cores
 

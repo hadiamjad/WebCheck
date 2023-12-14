@@ -1,0 +1,252 @@
+2023-12-14 13:56:00,731 - INFO - generating-surrogates: .DS_Store
+2023-12-14 13:56:00,734 - INFO - generating-surrogates: canvas.com
+2023-12-14 13:56:00,845 - INFO - script_not_in_request_file https://www.instructure.com/sites/default/files/js/js_fZCIQCorEUiasuCLPiD6avIiua69xpzLgSxkSj_iSLY.js setUserCountry@100@12
+2023-12-14 13:56:00,845 - INFO - script_not_in_request_file https://www.instructure.com/sites/default/files/js/js_fZCIQCorEUiasuCLPiD6avIiua69xpzLgSxkSj_iSLY.js @162@1
+2023-12-14 13:56:00,845 - INFO - script_not_in_request_file https://www.instructure.com/sites/default/files/js/js_fZCIQCorEUiasuCLPiD6avIiua69xpzLgSxkSj_iSLY.js @160@14
+2023-12-14 13:56:00,845 - INFO - script_not_in_request_file https://munchkin.marketo.net/munchkin.js n@6@475
+2023-12-14 13:56:00,845 - INFO - script_not_in_request_file https://munchkin.marketo.net/munchkin.js init@7@273
+2023-12-14 13:56:00,845 - INFO - script_not_in_request_file https://munchkin.marketo.net/munchkin.js m@6@156
+2023-12-14 13:56:00,845 - INFO - Replacing function call at line 843 column 20 for https://www.instructure.com/sites/default/files/js/js_Ypn3SL4nvXXYc_zVo20-DAVLxHZ2lEKBnkGM-AsO8r4.js and request_id 52200.51
+2023-12-14 13:56:00,846 - INFO - Replacing function call at line 872 column 9 for https://www.instructure.com/sites/default/files/js/js_Ypn3SL4nvXXYc_zVo20-DAVLxHZ2lEKBnkGM-AsO8r4.js and request_id 52200.51
+2023-12-14 13:56:00,846 - INFO - Replacing function call at line 15 column 334 for https://munchkin.marketo.net/163/munchkin.js and request_id 52200.686
+2023-12-14 13:56:00,847 - INFO - Replacing function call at line 25 column 296 for https://munchkin.marketo.net/163/munchkin.js and request_id 52200.686
+2023-12-14 13:56:00,847 - INFO - Replacing function call at line 21 column 306 for https://munchkin.marketo.net/163/munchkin.js and request_id 52200.686
+2023-12-14 13:56:00,847 - INFO - Replacing function call at line 13 column 18 for https://munchkin.marketo.net/163/munchkin.js and request_id 52200.686
+2023-12-14 13:56:00,847 - INFO - Replacing function call at line 26 column 63 for https://munchkin.marketo.net/163/munchkin.js and request_id 52200.686
+2023-12-14 13:56:00,847 - INFO - inline_script https://www.instructure.com/canvas?domain=canvas ['i.l@20@22134', 'i.f.j@20@22655', 'i.e@20@21164', '@20@21186', '@20@20294', '_@20@19816', '@20@26377', 'o@20@26088', 'i@20@20988', 'd@20@8023', 'emit@20@8744', 'o@20@7910', '@20@8060']
+2023-12-14 13:56:00,847 - INFO - Replacing function call at line 2 column 69721 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,849 - INFO - Replacing function call at line 2 column 30438 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,849 - INFO - Crashed replacing function call at line 2 column 30438 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,849 - INFO - Replacing function call at line 2 column 70344 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,849 - INFO - Crashed replacing function call at line 2 column 70344 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,849 - INFO - Replacing function call at line 2 column 30445 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,850 - INFO - Replacing function call at line 2 column 70359 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,850 - INFO - Crashed replacing function call at line 2 column 70359 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,850 - INFO - Replacing function call at line 2 column 69397 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,850 - INFO - Replacing function call at line 2 column 188892 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,851 - INFO - Replacing function call at line 2 column 70305 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,852 - INFO - Replacing function call at line 2 column 303822 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,852 - INFO - Replacing function call at line 2 column 236479 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,853 - INFO - Replacing function call at line 2 column 304485 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,853 - INFO - Replacing function call at line 2 column 304312 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,854 - INFO - Replacing function call at line 2 column 205063 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,854 - INFO - Replacing function call at line 2 column 304647 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,855 - INFO - Replacing function call at line 2 column 304151 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,855 - INFO - Replacing function call at line 2 column 301738 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,855 - INFO - Replacing function call at line 2 column 304124 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,856 - INFO - Replacing function call at line 2 column 304575 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,856 - INFO - Replacing function call at line 2 column 304193 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,857 - INFO - Replacing function call at line 2 column 301434 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,857 - INFO - Replacing function call at line 2 column 204292 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,858 - INFO - Replacing function call at line 2 column 134006 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,858 - INFO - Crashed replacing function call at line 2 column 134006 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,858 - INFO - Replacing function call at line 2 column 133690 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,858 - INFO - Crashed replacing function call at line 2 column 133690 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,858 - INFO - Replacing function call at line 2 column 277808 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,859 - INFO - Crashed replacing function call at line 2 column 277808 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,859 - INFO - Replacing function call at line 2 column 278120 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,859 - INFO - Crashed replacing function call at line 2 column 278120 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,859 - INFO - Replacing function call at line 2 column 314046 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,859 - INFO - Replacing function call at line 2 column 269256 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,860 - INFO - Replacing function call at line 2 column 316454 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,860 - INFO - Replacing function call at line 2 column 189591 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,861 - INFO - Replacing function call at line 2 column 133642 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,861 - INFO - Crashed replacing function call at line 2 column 133642 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,861 - INFO - Replacing function call at line 2 column 314253 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,861 - INFO - Replacing function call at line 2 column 133705 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,862 - INFO - Crashed replacing function call at line 2 column 133705 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,862 - INFO - Replacing function call at line 2 column 277841 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,862 - INFO - Crashed replacing function call at line 2 column 277841 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,862 - INFO - Replacing function call at line 2 column 633891 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,862 - INFO - Crashed replacing function call at line 2 column 633891 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,862 - INFO - Replacing function call at line 2 column 634158 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,862 - INFO - Crashed replacing function call at line 2 column 634158 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,862 - INFO - Replacing function call at line 2 column 247015 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,862 - INFO - Crashed replacing function call at line 2 column 247015 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,862 - INFO - Replacing function call at line 2 column 638337 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,863 - INFO - Crashed replacing function call at line 2 column 638337 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,863 - INFO - Replacing function call at line 2 column 40973 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,863 - INFO - Replacing function call at line 2 column 43201 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,863 - INFO - Crashed replacing function call at line 2 column 43201 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,863 - INFO - Replacing function call at line 2 column 301988 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,863 - INFO - Crashed replacing function call at line 2 column 301988 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,863 - INFO - Replacing function call at line 2 column 288948 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,864 - INFO - Crashed replacing function call at line 2 column 288948 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,864 - INFO - Replacing function call at line 2 column 43003 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,864 - INFO - Crashed replacing function call at line 2 column 43003 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,864 - INFO - Replacing function call at line 2 column 288900 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,864 - INFO - Replacing function call at line 2 column 278283 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,865 - INFO - Replacing function call at line 2 column 637674 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,865 - INFO - Crashed replacing function call at line 2 column 637674 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,865 - INFO - Replacing function call at line 2 column 286479 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,865 - INFO - Replacing function call at line 2 column 88556 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,866 - INFO - Replacing function call at line 2 column 636383 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,866 - INFO - Crashed replacing function call at line 2 column 636383 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,866 - INFO - Replacing function call at line 2 column 89052 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,866 - INFO - Replacing function call at line 2 column 277624 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,867 - INFO - Crashed replacing function call at line 2 column 277624 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,867 - INFO - Replacing function call at line 2 column 88584 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,867 - INFO - Replacing function call at line 2 column 286451 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,868 - INFO - Replacing function call at line 2 column 302427 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,868 - INFO - Replacing function call at line 2 column 302945 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,868 - INFO - Replacing function call at line 2 column 302820 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,869 - INFO - Replacing function call at line 2 column 89265 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,869 - INFO - Crashed replacing function call at line 2 column 89265 for https://fast.wistia.com/assets/external/E-v1.js and error end index not found
+2023-12-14 13:56:00,869 - INFO - Replacing function call at line 2 column 303078 for https://fast.wistia.com/assets/external/E-v1.js and request_id 52200.54
+2023-12-14 13:56:00,870 - INFO - Replacing function call at line 2 column 17175 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 27694 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 45131 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 19153 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 37091 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 3820 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 39815 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,871 - INFO - Replacing function call at line 2 column 29028 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 19170 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Crashed replacing function call at line 2 column 19170 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and error end index not found
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 5291 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 45220 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 18582 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 27173 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 45349 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Crashed replacing function call at line 2 column 45349 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and error end index not found
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 18626 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Crashed replacing function call at line 2 column 18626 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and error end index not found
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 9431 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 965 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 919 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,872 - INFO - Replacing function call at line 2 column 1500 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 32840 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 632 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 5645 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 36062 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 1513 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Crashed replacing function call at line 2 column 1513 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and error end index not found
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 1475 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 5389 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 2 column 29241 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and request_id 52200.8697
+2023-12-14 13:56:00,873 - INFO - Crashed replacing function call at line 2 column 29241 for https://js-agent.newrelic.com/nr-rum-1.248.0.min.js and error end index not found
+2023-12-14 13:56:00,873 - INFO - Replacing function call at line 1 column 77977 for https://fast.wistia.com/assets/external/engines/hls_video.js and request_id 52200.8956
+2023-12-14 13:56:00,874 - INFO - Crashed replacing function call at line 1 column 77977 for https://fast.wistia.com/assets/external/engines/hls_video.js and error end index not found
+2023-12-14 13:56:00,874 - INFO - Replacing function call at line 1 column 88028 for https://fast.wistia.com/assets/external/engines/hls_video.js and request_id 52200.8956
+2023-12-14 13:56:00,874 - INFO - Crashed replacing function call at line 1 column 88028 for https://fast.wistia.com/assets/external/engines/hls_video.js and error end index not found
+2023-12-14 13:56:00,874 - INFO - Replacing function call at line 1 column 77779 for https://fast.wistia.com/assets/external/engines/hls_video.js and request_id 52200.8956
+2023-12-14 13:56:00,875 - INFO - Crashed replacing function call at line 1 column 77779 for https://fast.wistia.com/assets/external/engines/hls_video.js and error end index not found
+2023-12-14 13:56:00,875 - INFO - Replacing function call at line 1 column 60539 for https://fast.wistia.com/assets/external/engines/hls_video.js and request_id 52200.8956
+2023-12-14 13:56:00,875 - INFO - Crashed replacing function call at line 1 column 60539 for https://fast.wistia.com/assets/external/engines/hls_video.js and error end index not found
+2023-12-14 13:56:00,875 - INFO - Replacing function call at line 1 column 6152 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,875 - INFO - Replacing function call at line 1 column 5958 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,875 - INFO - Replacing function call at line 1 column 7990 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,875 - INFO - Replacing function call at line 1 column 7473 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,875 - INFO - Replacing function call at line 1 column 10063 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,876 - INFO - Replacing function call at line 1 column 9322 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,876 - INFO - Replacing function call at line 1 column 7401 for https://fast.wistia.com/assets/external/allIntegrations.js and request_id 52200.9232
+2023-12-14 13:56:00,876 - INFO - Total Logs {'script_not_in_request_file': 6, 'inline_script': 13, 'replace_function_call_fail': 31, 'success': 71}
+2023-12-14 13:56:00,876 - INFO - generating-surrogates: thedailybeast.com
+2023-12-14 13:56:00,961 - INFO - inline_script https://www.thedailybeast.com/ ['@49@1564', '@49@2041', '@49@1521', '@51@2323', '@51@2472', '@51@4264', '@56@70', '@57@10', '@142@80', '@143@18', '@315@36', '@316@18']
+2023-12-14 13:56:00,961 - INFO - Replacing function call at line 55 column 4 for https://cdn.cookielaw.org/opt-out/otCCPAiab.js and request_id 52809.30
+2023-12-14 13:56:00,962 - INFO - Replacing function call at line 50 column 4 for https://cdn.cookielaw.org/opt-out/otCCPAiab.js and request_id 52809.30
+2023-12-14 13:56:00,962 - INFO - Replacing function call at line 4 column 41115 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,963 - INFO - Replacing function call at line 4 column 120172 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,963 - INFO - Replacing function call at line 4 column 885 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,963 - INFO - Replacing function call at line 4 column 229958 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,964 - INFO - Replacing function call at line 4 column 895 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,979 - INFO - Replacing function call at line 4 column 120471 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,986 - INFO - Crashed replacing function call at line 4 column 120471 for https://c.aps.amazon-adsystem.com/apstag.js and error end index not found
+2023-12-14 13:56:00,986 - INFO - Replacing function call at line 4 column 120474 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,993 - INFO - Crashed replacing function call at line 4 column 120474 for https://c.aps.amazon-adsystem.com/apstag.js and error end index not found
+2023-12-14 13:56:00,993 - INFO - Replacing function call at line 4 column 91 for https://c.aps.amazon-adsystem.com/apstag.js and request_id 52809.32
+2023-12-14 13:56:00,993 - INFO - Replacing function call at line 20 column 2373 for https://a.teads.tv/analytics/tag.js and request_id 52809.35
+2023-12-14 13:56:00,993 - INFO - Replacing function call at line 20 column 4036 for https://a.teads.tv/analytics/tag.js and request_id 52809.35
+2023-12-14 13:56:00,993 - INFO - Replacing function call at line 20 column 4928 for https://a.teads.tv/analytics/tag.js and request_id 52809.35
+2023-12-14 13:56:00,994 - INFO - Replacing function call at line 20 column 3966 for https://a.teads.tv/analytics/tag.js and request_id 52809.35
+2023-12-14 13:56:00,994 - INFO - Replacing function call at line 20 column 3954 for https://a.teads.tv/analytics/tag.js and request_id 52809.35
+2023-12-14 13:56:00,994 - INFO - Replacing function call at line 3 column 16724 for https://launcher.spot.im/spot/sp_O5IsfncM and request_id 52809.31
+2023-12-14 13:56:00,994 - INFO - Replacing function call at line 3 column 37118 for https://launcher.spot.im/spot/sp_O5IsfncM and request_id 52809.31
+2023-12-14 13:56:00,994 - INFO - Replacing function call at line 3 column 16818 for https://launcher.spot.im/spot/sp_O5IsfncM and request_id 52809.31
+2023-12-14 13:56:00,995 - INFO - Replacing function call at line 4 column 29 for https://launcher.spot.im/spot/sp_O5IsfncM and request_id 52809.31
+2023-12-14 13:56:00,995 - INFO - Replacing function call at line 4 column 211 for https://launcher.spot.im/spot/sp_O5IsfncM and request_id 52809.31
+2023-12-14 13:56:00,996 - INFO - Replacing function call at line 1 column 76150 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,996 - INFO - Replacing function call at line 1 column 249500 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,997 - INFO - Replacing function call at line 1 column 75297 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,997 - INFO - Replacing function call at line 1 column 252457 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,998 - INFO - Replacing function call at line 1 column 75035 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,998 - INFO - Replacing function call at line 1 column 249471 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,999 - INFO - Replacing function call at line 1 column 170074 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:00,999 - INFO - Replacing function call at line 1 column 253776 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,000 - INFO - Replacing function call at line 1 column 254064 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,000 - INFO - Replacing function call at line 1 column 11829 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,001 - INFO - Replacing function call at line 1 column 10247 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,001 - INFO - Replacing function call at line 1 column 154452 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,002 - INFO - Replacing function call at line 1 column 1729 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,003 - INFO - Replacing function call at line 1 column 343228 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,003 - INFO - Replacing function call at line 1 column 342679 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,004 - INFO - Replacing function call at line 1 column 344146 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,004 - INFO - Replacing function call at line 1 column 344205 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,005 - INFO - Replacing function call at line 1 column 11076 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,005 - INFO - Replacing function call at line 1 column 344122 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,006 - INFO - Replacing function call at line 1 column 253671 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,006 - INFO - Replacing function call at line 1 column 342934 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,007 - INFO - Replacing function call at line 1 column 15340 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,007 - INFO - Replacing function call at line 1 column 156897 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,008 - INFO - Crashed replacing function call at line 1 column 156897 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and error end index not found
+2023-12-14 13:56:01,008 - INFO - Replacing function call at line 1 column 253941 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,009 - INFO - Replacing function call at line 1 column 11784 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,009 - INFO - Replacing function call at line 1 column 1660 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,010 - INFO - Replacing function call at line 1 column 252712 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,010 - INFO - Replacing function call at line 1 column 70975 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,011 - INFO - Replacing function call at line 1 column 70849 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,011 - INFO - Replacing function call at line 1 column 9462 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,012 - INFO - Replacing function call at line 1 column 342901 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,012 - INFO - Replacing function call at line 1 column 169372 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,013 - INFO - Replacing function call at line 1 column 169826 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,013 - INFO - Replacing function call at line 1 column 72403 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,014 - INFO - Replacing function call at line 1 column 162655 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,014 - INFO - Crashed replacing function call at line 1 column 162655 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and error end index not found
+2023-12-14 13:56:01,014 - INFO - Replacing function call at line 1 column 342911 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,015 - INFO - Replacing function call at line 1 column 342736 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,015 - INFO - Replacing function call at line 1 column 249889 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,016 - INFO - Replacing function call at line 1 column 179219 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,016 - INFO - Replacing function call at line 1 column 249845 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,017 - INFO - Replacing function call at line 1 column 249919 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,017 - INFO - Crashed replacing function call at line 1 column 249919 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and error end index not found
+2023-12-14 13:56:01,017 - INFO - Replacing function call at line 1 column 249138 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,017 - INFO - Replacing function call at line 1 column 342732 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,018 - INFO - Replacing function call at line 1 column 145268 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,019 - INFO - Replacing function call at line 1 column 145655 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,019 - INFO - Replacing function call at line 1 column 144628 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,020 - INFO - Replacing function call at line 1 column 162786 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,020 - INFO - Crashed replacing function call at line 1 column 162786 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and error end index not found
+2023-12-14 13:56:01,020 - INFO - Replacing function call at line 1 column 145392 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,020 - INFO - Replacing function call at line 1 column 143776 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,021 - INFO - Replacing function call at line 1 column 143336 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,021 - INFO - Replacing function call at line 1 column 68286 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,022 - INFO - Replacing function call at line 1 column 145620 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,023 - INFO - Replacing function call at line 1 column 68613 for https://05f14972-530d-4235-a941-d79be44f229b.edge.permutive.app/05f14972-530d-4235-a941-d79be44f229b-web.js and request_id 52809.36
+2023-12-14 13:56:01,023 - INFO - Replacing function call at line 24 column 55 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,024 - INFO - Replacing function call at line 96 column 308 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,024 - INFO - Replacing function call at line 93 column 211 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,024 - INFO - Replacing function call at line 89 column 151 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,025 - INFO - Replacing function call at line 86 column 532 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,025 - INFO - Replacing function call at line 96 column 407 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,025 - INFO - Replacing function call at line 92 column 178 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,025 - INFO - Replacing function call at line 86 column 500 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,025 - INFO - Replacing function call at line 96 column 355 for https://www.google-analytics.com/analytics.js and request_id 52809.56
+2023-12-14 13:56:01,025 - INFO - Replacing function call at line 81 column 489 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,026 - INFO - Crashed replacing function call at line 81 column 489 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and error end index not found
+2023-12-14 13:56:01,026 - INFO - Replacing function call at line 333 column 26 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,026 - INFO - Replacing function call at line 446 column 292 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,026 - INFO - Replacing function call at line 446 column 298 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,026 - INFO - Crashed replacing function call at line 446 column 298 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and error end index not found
+2023-12-14 13:56:01,026 - INFO - Replacing function call at line 347 column 411 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,027 - INFO - Replacing function call at line 307 column 501 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,027 - INFO - Replacing function call at line 83 column 370 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,028 - INFO - Replacing function call at line 454 column 3 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,028 - INFO - Replacing function call at line 449 column 466 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,028 - INFO - Replacing function call at line 344 column 43 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,029 - INFO - Replacing function call at line 342 column 472 for https://www.googletagmanager.com/gtm.js?id=GTM-KVBJ497 and request_id 52809.60
+2023-12-14 13:56:01,029 - INFO - Replacing function call at line 1 column 15018 for https://cadmus.script.ac/d2ifridibpqmcm/script.js and request_id 52809.93
+2023-12-14 13:56:01,029 - INFO - Replacing function call at line 1 column 2 for https://cadmus.script.ac/d2ifridibpqmcm/script.js and request_id 52809.93
+2023-12-14 13:56:01,029 - INFO - Replacing function call at line 1 column 31079 for https://cadmus.script.ac/d2ifridibpqmcm/script.js and request_id 52809.93
+2023-12-14 13:56:01,030 - INFO - Replacing function call at line 1 column 101157 for https://cadmus.script.ac/d2ifridibpqmcm/script.js and request_id 52809.93
+2023-12-14 13:56:01,030 - INFO - Replacing function call at line 1 column 92670 for https://cadmus.script.ac/d2ifridibpqmcm/script.js and request_id 52809.93
+2023-12-14 13:56:01,030 - INFO - Total Logs {'script_not_in_request_file': 0, 'inline_script': 12, 'replace_function_call_fail': 8, 'success': 90}
