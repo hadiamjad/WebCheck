@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import json
 import shutil
-# from pyvirtualdisplay import Display
+from pyvirtualdisplay import Display
 import pandas as pd
 import requests
 import os
@@ -19,8 +19,8 @@ import chromedriver_autoinstaller
 
 
 # virtual display
-# display = Display(visible=0, size=(1000, 1000))
-# display.start()
+display = Display(visible=0, size=(1000, 1000))
+display.start()
 
 df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
