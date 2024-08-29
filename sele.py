@@ -328,13 +328,13 @@ for i in df.index:
             # visit website
             visitWebsite(df, 40, False)
 
-            # update breakpoints list
-            addBreakPoints("server/output/" + df["website"][i])
-            # delete previous crawl
-            shutil.rmtree("server/output/" + df["website"][i])
+            # # update breakpoints list
+            # addBreakPoints("server/output/" + df["website"][i])
+            # # delete previous crawl
+            # shutil.rmtree("server/output/" + df["website"][i])
 
-            # visit website
-            visitWebsite(df, 40, False)
+            # # visit website
+            # visitWebsite(df, 40, False)
 
             # save responses
             print(r"Collecting Responses: " + str(i) + " website: " + df["website"][i])

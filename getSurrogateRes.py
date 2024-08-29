@@ -53,25 +53,25 @@ storage_access_norm = 0
 for f in fold:
     try:
         if len(os.listdir("server/output_surr/" + f + "/surrogate")) > 0:
-            surr_gen = {"script_not_in_request_file": 0, "inline_script": 0, "replace_function_call_fail": 0, "success": 0}
-            with open("server/output_surr/" + f + "/surrogate_logs.json") as file:
-                # Load JSON data from file
-                data = json.load(file)
-                surr_gen["script_not_in_request_file"] = data["script_not_in_request_file"]
-                surr_gen["inline_script"] = data["inline_script"]
-                surr_gen["replace_function_call_fail"] = data["replace_function_call_fail"]
-                surr_gen["success"] += data["success"]
-                # print("Surrogate_logs", data)
-            try:
-                with open("server/output_surr/" + f + "/cookie_storage.json", 'r') as file:
-                    lines = file.readlines()
-                    storage_access_norm += len(lines)
-                with open("server/output/" + f + "/cookie_storage.json", 'r') as file:
-                    lines = file.readlines()
-                    storage_access_surr += len(lines)
-            except:
-                pass
-
+            # surr_gen = {"script_not_in_request_file": 0, "inline_script": 0, "replace_function_call_fail": 0, "success": 0}
+            # with open("server/output_surr/" + f + "/surrogate_logs.json") as file:
+            #     # Load JSON data from file
+            #     data = json.load(file)
+            #     surr_gen["script_not_in_request_file"] = data["script_not_in_request_file"]
+            #     surr_gen["inline_script"] = data["inline_script"]
+            #     surr_gen["replace_function_call_fail"] = data["replace_function_call_fail"]
+            #     surr_gen["success"] += data["success"]
+            #     # print("Surrogate_logs", data)
+            # try:
+            #     with open("server/output_surr/" + f + "/cookie_storage.json", 'r') as file:
+            #         lines = file.readlines()
+            #         storage_access_norm += len(lines)
+            #     with open("server/output/" + f + "/cookie_storage.json", 'r') as file:
+            #         lines = file.readlines()
+            #         storage_access_surr += len(lines)
+            # except:
+            #     pass
+            print(f)
             surr = {"tracking-functions": [], "inline-functions": [], "tracking-requests": 0, "functional-requests":0 }    
             # reading big request data line by line
             with open("server/output/" + f + "/label_request.json") as file:
@@ -122,10 +122,10 @@ for f in fold:
             norm_tracking += norm["tracking-requests"]
             surr_functional += surr["functional-requests"]
             norm_functional += norm["functional-requests"]
-            script_not_in_request_file += surr_gen["script_not_in_request_file"]
-            inline_script += surr_gen["inline_script"]
-            replace_function_call_fail += surr_gen["replace_function_call_fail"]
-            replace_function_call_success += surr_gen["success"]
+            # script_not_in_request_file += surr_gen["script_not_in_request_file"]
+            # inline_script += surr_gen["inline_script"]
+            # replace_function_call_fail += surr_gen["replace_function_call_fail"]
+            # replace_function_call_success += surr_gen["success"]
 
             # print("Before-surrogate",f,{k: len(v) if isinstance(v, list) else v for k, v in norm.items()})
                     
