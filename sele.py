@@ -22,9 +22,9 @@ import chromedriver_autoinstaller
 display = Display(visible=0, size=(1000, 1000))
 display.start()
 
-df = pd.read_csv(r"ten.csv")
+# df = pd.read_csv(r"ten.csv")
 # extractDigits(os.listdir('/home/student/TrackerSift/UserStudy/output'))
-# df = pd.DataFrame([["canvas.com"]], columns=["website"])
+df = pd.DataFrame([["mlb.com"]], columns=["website"])
 
 
 # helper functions for breakpoints
@@ -292,6 +292,19 @@ def visitWebsite(df, sleep, mouse_move):
         with open("server/output/" + df["website"][i] + "/performance.json", "w") as f:
             json.dump(dic, f)
 
+        # Collecting Metrics
+        # 1: page HTML
+        f = open(
+            "server/output/" + df["website"][i] + "/pageHTML.txt",
+            "w+",
+            encoding="utf-8",
+        )
+        f.write(str(driver.page_source))
+        f.close()
+        # 2: page Errors
+        f = open("server/output/" + df["website"][i] + "/pageErrors.txt", "w+")
+        f.write(str(driver.get_log("browser")))
+        f.close()
         # dictionary collecting logs
         # 1: Logs 2: PageSource
         # dic[df["website"][i]] = []

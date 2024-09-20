@@ -30,7 +30,7 @@ def process_folder(folder):
 
 def main():
     folders = os.listdir("server/output")
-    folders.remove(".DS_Store")
+    # folders.remove(".DS_Store")
     num_jobs = len(folders)
     num_parallel_jobs = -1  # Use all available CPU cores
 

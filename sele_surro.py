@@ -297,6 +297,20 @@ def visitWebsite(df, sleep, mouse_move):
         # saving performance logs as json
         with open("server/output/" + df["website"][i] + "/performance.json", "w") as f:
             json.dump(dic, f)
+
+        # Collecting Metrics
+        # 1: page HTML
+        f = open(
+            "server/output/" + df["website"][i] + "/pageHTML.txt",
+            "w+",
+            encoding="utf-8",
+        )
+        f.write(str(driver.page_source))
+        f.close()
+        # 2: page Errors
+        f = open("server/output/" + df["website"][i] + "/pageErrors.txt", "w+")
+        f.write(str(driver.get_log("browser")))
+        f.close()
         # dictionary collecting logs
         # 1: Logs 2: PageSource
         # dic[df["website"][i]] = []

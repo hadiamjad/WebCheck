@@ -115,6 +115,8 @@ for f in fold:
                         else:
                             norm["functional-requests"] += 1
             # if surr["tracking-functions"] < norm["tracking-functions"]:
+            print(surr["functional-requests"])
+            print(norm["functional-requests"])
             count += 1
             surr_average += len(surr["tracking-functions"])
             norm_average += len(norm["tracking-functions"])
